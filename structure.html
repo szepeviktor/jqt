@@ -3,7 +3,7 @@
   <head>
 <title>Document structure &ndash; jqt · the jq template engine</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="jqt v0.2.0"/>
+<meta name="generator" content="jqt v0.3.0"/>
 <meta name='author' content='Joan Josep Ordinas Rosa' />
 <meta name='dcterms.modified' content='2016-08-28T10:27:09Z' />
 <link rel="stylesheet" type="text/css" href="jqt.css"/>
@@ -33,7 +33,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
   <body>
     <ul id="MENU">
-      <li class="logo"><a href="index.html">❴❴❏❵❵</a><span>v0.2.0</span></li>
+      <li class="logo"><a href="index.html">❴❴❏❵❵</a><span>v0.3.0</span></li>
 <li><a  href="./engine.html">Engine</a></li>
 <li><a class='current' href="./structure.html">Structure</a></li>
 <li><a  href="./content.html">Content</a></li>
@@ -125,7 +125,7 @@ Document +-----------&gt;|expand|--&gt;|markup|--+          |merge|--------&gt;|
 <h3 id="preprocessing">Preprocessing</h3>
 <p>Templates are preprocessed using <a href="https://logological.org/gpp">GPP</a>. All the expected options in a preprocessor are available, like defining new macros, include other files, etc. For example, a template fragment like</p>
 <pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;generator&quot;</span><span class="ot"> content=</span><span class="st">&quot;jqt v</span><span class="er">&lt;</span><span class="st">%include &quot;</span><span class="er">../VERSION&quot;</span><span class="kw">&gt;</span>&quot;/&gt;</code></pre>
-<p>will expand to the string <code>&lt;meta name=&quot;generator&quot; content=&quot;jqt v0.2.0&quot;/&gt;</code> as you can see in the internal code of this page.</p>
+<p>will expand to the string <code>&lt;meta name=&quot;generator&quot; content=&quot;jqt v0.3.0&quot;/&gt;</code> as you can see in the internal code of this page.</p>
 <h4 id="macro-calls">Macro calls</h4>
 <p>The macro syntax used by <em>jqt</em> precedes macro names with the characters <code>&lt;%</code> and finishes the macro calls with the character <code>&gt;</code>. The more common predefined macros have this syntax:</p>
 <pre><code>&lt;%defeval x y&gt;

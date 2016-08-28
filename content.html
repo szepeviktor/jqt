@@ -3,7 +3,7 @@
   <head>
 <title>Document content &ndash; jqt · the jq template engine</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="jqt v0.2.0"/>
+<meta name="generator" content="jqt v0.3.0"/>
 <meta name='author' content='Joan Josep Ordinas Rosa' />
 <meta name='dcterms.modified' content='2016-08-28T10:27:09Z' />
 <link rel="stylesheet" type="text/css" href="jqt.css"/>
@@ -14,7 +14,7 @@
 
   <body>
     <ul id="MENU">
-      <li class="logo"><a href="index.html">❴❴❏❵❵</a><span>v0.2.0</span></li>
+      <li class="logo"><a href="index.html">❴❴❏❵❵</a><span>v0.3.0</span></li>
 <li><a  href="./engine.html">Engine</a></li>
 <li><a  href="./structure.html">Structure</a></li>
 <li><a class='current' href="./content.html">Content</a></li>
@@ -89,7 +89,7 @@ Document +-----------&gt;|expand|--&gt;|markup|--+          |merge|--------&gt;|
 <h2 id="document-syntax">Document syntax</h2>
 <p>The document conversion has two stages. In the first text is preprocessed, and the second does the proper conversion to HTML.</p>
 <h3 id="preprocessing">Preprocessing</h3>
-<p>The MarkDown input content is preprocessed using <a href="https://logological.org/gpp">GPP</a>. All the expected options in a preprocessor are available, like defining new macros, include other files, etc. For example, a macro call like <code>&lt;%include &quot;../VERSION&quot;&gt;</code> will expand to he string <code>0.2.0</code> as you can see in this paragraph and on the top of these pages.</p>
+<p>The MarkDown input content is preprocessed using <a href="https://logological.org/gpp">GPP</a>. All the expected options in a preprocessor are available, like defining new macros, include other files, etc. For example, a macro call like <code>&lt;%include &quot;../VERSION&quot;&gt;</code> will expand to he string <code>0.3.0</code> as you can see in this paragraph and on the top of these pages.</p>
 <h4 id="macro-calls">Macro calls</h4>
 <p>All the power of GPP is available to help you when <a href="https://en.wikipedia.org/wiki/Wikipedia:Transclusion">transcluding</a> the input document. The macro syntax used by <em>jqt</em> in input documents precedes macro names with the characters <code>&lt;%</code> and finishes the macro calls with the character <code>&gt;</code>. The more common predefined macros have this syntax:</p>
 <pre><code>&lt;%defeval x y&gt;
@@ -110,7 +110,7 @@ Document +-----------&gt;|expand|--&gt;|markup|--+          |merge|--------&gt;|
     &lt;span style=&quot;font-variant:small-caps;&quot;&gt;$1&lt;/span&gt;
 &gt;</code></pre>
 <p>Predefined macros and user define macros have the same call sequence:</p>
-<pre><code>&lt;%include &quot;LINKS.MD&quot;&gt;
+<pre><code>&lt;%include &quot;LINKS.txt&quot;&gt;
 &lt;%sc &#39;A title in small caps&#39;&gt;</code></pre>
 <p>Warning: you must read the <a href="https://files.nothingisreal.com/software/gpp/gpp.html">GPP manual</a> if you want to know all the gory details.</p>
 <h4 id="skips">Skips</h4>
@@ -185,12 +185,6 @@ Fenced code blocks with tildes (~~~) or backticks (```)
 <td align="left">No</td>
 <td align="left">No</td>
 </tr>
-<tr class="odd">
-<td align="center"><code>\n---</code><a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a></td>
-<td align="left">No</td>
-<td align="left">No</td>
-<td align="left">No</td>
-</tr>
 </tbody>
 </table>
 <h3 id="pandocs-markdown">Pandoc’s Markdown</h3>
@@ -218,7 +212,6 @@ Fenced code blocks with tildes (~~~) or backticks (```)
 <li id="fn3"><p>Only inside user defined macros.<a href="#fnref3">↩</a></p></li>
 <li id="fn4"><p>Blocks of code fenced between two lines with three or more backticks.<a href="#fnref4">↩</a></p></li>
 <li id="fn5"><p>Blocks of code fenced between two lines with three or more tildes.<a href="#fnref5">↩</a></p></li>
-<li id="fn6"><p>YAML front matter fenced between two lines with three dashes.<a href="#fnref6">↩</a></p></li>
 </ol>
 </div>
 
